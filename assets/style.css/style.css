@@ -44,3 +44,40 @@ body {
     justify-content:center;
     margin:10px;
   }
+
+/*Buttons*/
+button {
+    margin: 2rem;
+    padding: 10px 40px;
+    font-family: Orbitron;
+    font-weight: 500;
+  }
+  
+  #challenge{
+  background-color:#f36d6d;
+  }
+  
+  #normal{
+    background-color: #93c47d;
+  }
+  
+  #restart , #home{
+    background-color:#a2c4c9;
+    } 
+  button {
+    margin:0px 32px;
+  }
+  button a {
+    text-decoration: none;
+    color: black;
+  }
+   .game-level :hover {
+    transition: 1s ease-out;
+    transform: scale(1.25);
+    perspective:(10px);
+   }
+   .options :hover {
+    transition: 1s ease-out;
+    transform: scale(1.25);
+    perspective:(10px);
+   }
