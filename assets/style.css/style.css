@@ -64,9 +64,7 @@ button {
   #restart , #home{
     background-color:#a2c4c9;
     } 
-  button {
-    margin:0px 32px;
-  }
+  
   button a {
     text-decoration: none;
     color: black;
@@ -81,3 +79,20 @@ button {
     transform: scale(1.25);
     perspective:(10px);
    }
+
+/*Game Grid Stylings*/
+.game-grid {
+  display: flex;
+  justify-content: center; 
+}
+.box {
+  background-color: #a2c4c9;
+  width: 100px;
+  height: 100px;
+  margin : 5px 5px 5px 0px;
+  border-radius: 10px;
+}
+
+.box:hover {
+ filter: opacity(0.6);
+}
