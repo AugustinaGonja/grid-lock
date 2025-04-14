@@ -47,7 +47,7 @@ body {
 
 /*Buttons*/
 button {
-    margin: 2rem;
+    margin:0px 32px;
     padding: 10px 40px;
     font-family: Orbitron;
     font-weight: 500;
@@ -87,12 +87,23 @@ button {
 }
 .box {
   background-color: #a2c4c9;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin : 5px 5px 5px 0px;
   border-radius: 10px;
 }
 
 .box:hover {
  filter: opacity(0.6);
+}
+
+/*Media Queries - Phones*/
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+  }
+  .box {
+    width: 5vh;
+    height:5vh ;
+  }
 }
