@@ -8,6 +8,7 @@ const boxesToRecall = 8;
 // Generate Pattern
 function generatePattern() {
   let pattern = [];
+  let randNum = Math.floor(Math.random() * boxes.length);
   const allBoxes = [];
 
   for (i = 0; i < boxes.length; i++) {
@@ -16,7 +17,6 @@ function generatePattern() {
   };
   // Generate an array which has a length of 8 random numbers from the allBoxes array and add to pattern.
   while (pattern.length < boxesToRecall) {
-    let randNum = Math.floor(Math.random() * boxes.length);
     pattern.push(randNum);
   };
   /* Ensure that no numbers are repeats.
@@ -31,3 +31,13 @@ function generatePattern() {
 
 generatePattern();
 
+// Reveal Pattern 
+
+function revealPattern(){
+  let revealTime = 10000 // Reveal time is 10s
+
+  for (let i = 0 ; i < pattern.length ; i++){
+    pattern[i].style.backgroundColor = ""
+  };
+
+};
