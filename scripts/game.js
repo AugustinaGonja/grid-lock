@@ -36,8 +36,14 @@ generatePattern();
 function revealPattern(){
   let revealTime = 10000 // Reveal time is 10s
 
-  for (let i = 0 ; i < pattern.length ; i++){
-    pattern[i].style.backgroundColor = ""
-  };
+  for (let i = 0 ; i < pattern.length ; i++) {
+    pattern[i].style.backgroundColor = "#ed9121";
+  }
 
+setTimeout(function () {
+  for (let i = 0; i < pattern.length; i++) {
+    pattern[i].style.backgroundColor = "";
+  }
+}, revealTime);
 };
+
