@@ -23,3 +23,5 @@ console.log(boxes);
 console.log(allBoxes);
 console.log(pattern);
 }
+
+generatePattern();
