@@ -47,3 +47,12 @@ setTimeout(function () {
 }, revealTime);
 };
 
+revealPattern();
+// Click Tile
+
+function clickTile (){
+  for (let i = 0 ; i < boxes.length ; i++){
+    boxes.addEventListener("click", userClick);
+  }
+};
+
