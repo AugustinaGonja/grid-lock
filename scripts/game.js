@@ -30,3 +30,4 @@ function generatePattern() {
 }
 
 generatePattern();
+
