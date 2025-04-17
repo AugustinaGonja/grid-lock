@@ -63,3 +63,6 @@ function clickTile (){
 // User Click
 // Takes care of what will happen when user clicks correct or incorrect tile
 
+function userClick(){
+  
+}
