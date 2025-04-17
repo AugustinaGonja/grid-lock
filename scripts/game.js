@@ -38,12 +38,12 @@ function revealPattern(){
   let revealTime = 10000 // Reveal time is 10s
 
   for (let i = 0 ; i < pattern.length ; i++) {
-    pattern[i].style.backgroundColor = "#ed9121";
+    boxes[pattern[i]].style.backgroundColor = "#ed9121";
   }
 // Will ensure that the pattern disappears within the time limit 
 setTimeout(function () {
   for (let i = 0; i < pattern.length; i++) {
-    pattern[i].style.backgroundColor = "";
+    boxes[pattern[i]].style.backgroundColor = "";
     // Restores color back to normal for all highlighted tiles
   }
 }, revealTime);
