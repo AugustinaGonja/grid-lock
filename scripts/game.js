@@ -46,6 +46,7 @@ function revealPattern() {
       boxes[pattern[i]].style.backgroundColor = "";
       // Restores color back to normal for all highlighted tiles
     }
+    clickTile();
   }, revealTime);
 }
 
@@ -54,6 +55,13 @@ function revealPattern() {
 function clickTile() {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("click", userClick);
+  }
+};
+// Stop Click
+
+function stopClick(){
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].removeEventListener("click", stopClick);
   }
 };
 
@@ -73,13 +81,14 @@ function userClick(e) {
 
     if (correctTiles === pattern.length) {
       alert("Congratulations! You are a winner :)");
-      restartGame()
+      stopClick();
     }
 
   } else {
     selectedBox.style.backgroundColor = "#c21807"//Change Colour to Red if otherwise
     alert("Oh no ! This is the Wrong tile :( Game Over.")
-  }
+  stopClick();
+}
 };
 
 
@@ -94,14 +103,13 @@ function restartGame() {
     box.style.backgroundColor = "";
   }
   // Call generatePattern and revealPattern
+  stopClick();
   generatePattern();
   revealPattern();
 };
 
-// Call Functions 
-clickTile();
-generatePattern();
-revealPattern();
+restartGame();
+
 // Add Event Listener to Restart Game button  
 
 restartButton.addEventListener("click", restartGame);
