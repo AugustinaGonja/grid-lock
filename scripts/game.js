@@ -47,9 +47,8 @@ setTimeout(function () {
     // Restores color back to normal for all highlighted tiles
   }
 }, revealTime);
-};
+}
 
-generatePattern();
 revealPattern();
 
 // Click Tile
@@ -63,6 +62,14 @@ function clickTile (){
 // User Click
 // Takes care of what will happen when user clicks correct or incorrect tile
 
-function userClick(){
-  
-}
+function userClick(e){
+  let selectedBox = e.target;
+  let boxIndex = indexOf.selectedBox; // Get index of box that player has selected
+
+  if (pattern.includes(boxindex)){
+    selectedBox.style.backgroundColor="#568203" //Change Colour to  green if player has selected box that is inc in array.
+    scoreCounter.textContent = ++scoreCounter; //increment score by 1
+
+  }
+
+};
