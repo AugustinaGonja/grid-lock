@@ -66,10 +66,13 @@ function userClick(e){
   let selectedBox = e.target;
   let boxIndex = indexOf.selectedBox; // Get index of box that player has selected
 
-  if (pattern.includes(boxindex)){
-    selectedBox.style.backgroundColor="#568203" //Change Colour to  green if player has selected box that is inc in array.
+  if (pattern.includes(boxIndex)){
+    selectedBox.style.backgroundColor="#568203" //Change Colour to Green if player has selected box that is inc in array.
     scoreCounter.textContent = ++scoreCounter; //increment score by 1
-
-  }
-
+ }else{
+  selectedBox.style.backgroundColor="#c21807"//Change Colour to Red if otherwise
+  alert("Oh no ! This is the Wrong tile :( Game Over.")
+ }
 };
+
+// Win Game 
