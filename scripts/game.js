@@ -72,7 +72,7 @@ function userClick(e){
     selectedBox.style.backgroundColor="#568203" //Change Colour to Green if player has selected box that is inc in array.
     scoreCounter.textContent = correctTiles;
     correctTiles++;//increment score by 1
-    
+
     if (correctTiles === pattern.length){
       alert("Congratulations! You are a winner :)");
     restartGame()}
@@ -85,4 +85,9 @@ function userClick(e){
 
 userClick(e);
 
-// Win Game 
+// Start/Restart Game
+
+function restartGame (){
+
+}
+ 
