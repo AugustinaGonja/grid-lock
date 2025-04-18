@@ -35,7 +35,7 @@ function generatePattern() {
 // Reveal Pattern 
 
 function revealPattern() {
-  let revealTime = 10000 // Reveal time is 10s
+  let revealTime = 4000 // Reveal time is 10s
 
   for (let i = 0; i < pattern.length; i++) {
     boxes[pattern[i]].style.backgroundColor = "#ed9121";
@@ -53,7 +53,7 @@ function revealPattern() {
 
 function clickTile() {
   for (let i = 0; i < boxes.length; i++) {
-    boxes.addEventListener("click", userClick);
+    boxes[i].addEventListener("click", userClick);
   }
 };
 
@@ -62,13 +62,14 @@ function clickTile() {
 
 function userClick(e) {
   let selectedBox = e.target;
-  let boxIndex = indexOf.selectedBox; // Get index of box that player has selected
+  let boxIndex = Array.from(boxes).indexOf(selectedBox); // Get index of box that player has selected
 
   if (pattern.includes(boxIndex)) {
-    if (!selectedBox.style.backgroundColor) // if box isnt already green ,then user can click and inc score if it is part of array
+    if (!selectedBox.style.backgroundColor){// if box isnt already green ,then user can click and inc score if it is part of array
       selectedBox.style.backgroundColor = "#568203" //Change Colour to Green if player has selected box that is inc in array.
+      correctTiles++;//increment score by 1
     scoreCounter.textContent = correctTiles;
-    correctTiles++;//increment score by 1
+  };
 
     if (correctTiles === pattern.length) {
       alert("Congratulations! You are a winner :)");
@@ -86,12 +87,17 @@ function userClick(e) {
 
 function restartGame() {
   // Clear Score Count back to 0
-  scoreCounter.textContent = 0
+  correctTiles = 0 ;
+  scoreCounter.textContent = 0;
   // Call generatePattern and revealPattern
   generatePattern();
   revealPattern();
 };
 
+// Call Functions
+clickTile();
+generatePattern();
+revealPattern();
 // Add Event Listener to Restart Game button  
 
 restartButton.addEventListener("click", restartGame);
