@@ -89,12 +89,16 @@ function restartGame() {
   // Clear Score Count back to 0
   correctTiles = 0 ;
   scoreCounter.textContent = 0;
+  // Restore all boxes to original state
+  for (let box of boxes) {
+    box.style.backgroundColor = "";
+  }
   // Call generatePattern and revealPattern
   generatePattern();
   revealPattern();
 };
 
-// Call Functions
+// Call Functions 
 clickTile();
 generatePattern();
 revealPattern();
