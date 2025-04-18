@@ -5,6 +5,7 @@ let restartGame = document.getElementById("restart");
 
 const boxesToRecall = 8;
 let pattern = [];
+let correctTiles = 0;
 
 // Generate Pattern
 function generatePattern() {
@@ -29,7 +30,7 @@ function generatePattern() {
   console.log(allBoxes);
   console.log(pattern);
 }
-
+generatePattern();
 
 
 // Reveal Pattern 
@@ -67,12 +68,17 @@ function userClick(e){
   let boxIndex = indexOf.selectedBox; // Get index of box that player has selected
 
   if (pattern.includes(boxIndex)){
+    if (!selectedBox.style.backgroundColor) // if box isnt already green ,then user can click and inc score if it is part of array
     selectedBox.style.backgroundColor="#568203" //Change Colour to Green if player has selected box that is inc in array.
-    scoreCounter.textContent = ++scoreCounter; //increment score by 1
+    scoreCounter.textContent = correctTiles;
+    correctTiles++;//increment score by 1
+
  }else{
   selectedBox.style.backgroundColor="#c21807"//Change Colour to Red if otherwise
   alert("Oh no ! This is the Wrong tile :( Game Over.")
  }
 };
+
+userClick(e);
 
 // Win Game 
