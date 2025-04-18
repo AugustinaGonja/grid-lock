@@ -1,7 +1,10 @@
 # Gridlock - Testing
 During the testing phase of the game, I focused on documenting bugs as soon as I encountered them. Once again, Chrome DevTools proved to be incredibly helpful throughout this process. Due to time constraints, I wasn’t able to fully implement tests using Jest. Instead, I relied on console logging to verify that everything was functioning correctly on the backend.
 ![Game as displayed on different screensizes]()
-[View Gridlock on GitHub Pages]()
+
+
+[View Gridlock on GitHub Pages](https://augustinagonja.github.io/grid-lock/)
+
 ## Contents
 **[Automated Testing](#automated-testing)**
 * [Html Validator](#wc3-html-validator)
@@ -27,7 +30,8 @@ During the testing phase of the game, I focused on documenting bugs as soon as I
 ## Automated Testing
 ### WC3 HTML Validator
 
-
+### WC3 CSS Validator
+# Performance Testing
 # Solved & Known Bugs 
 ## Solved Bugs 
 | No | Bug | How I solved the issue |
@@ -37,6 +41,7 @@ During the testing phase of the game, I focused on documenting bugs as soon as I
 | 3 | Pattern array has reverted back to repeating again, but this time it repeats the exact same number 8 times.![Repeated indexes in Pattern Array](testing/Bugs/e3.png)|Commented out parts of the code to check what would be logged in console.Found that the first pattern.push(randNum) was causing the issue and making the indexes repeat again. [Fix](testing/Bugs/e5.png)  & [Result logged in Console](testing/Bugs/e6.png).|
 | 4 | Reference Error occurred in the revealPattern function, indicating that the randNum variable was undefined.![Reference Error_2](testing/Bugs/e4.png)| I defined pattern outside the generatePattern function so it could also be accessed by the revealPattern function.( Was previously defined INSIDE the generate function)|
 | 5 | Type Error occurred in the revealPattern function.![Type Error](testing/Bugs/e7.png)  [Error Code](testing/Bugs/e9.png)| I couldn’t color pattern[i] properly since I needed to access and style the actual boxes it was referring to. [Fix](testing/Bugs/e8.png) .|
+| 6 | Website Unresponsive and not loading.Issue within the Javascript, as whehn commented out , the website loads and its appearance is restored.![Loading](testing/Bugs/e9.png)| Calling the generatePattern function caused this issue. [Fix](testing/Bugs/e8.png) .|
 ## Known Bugs 
 | No | Bug | 
 | :--- | :--- | 

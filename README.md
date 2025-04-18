@@ -9,3 +9,6 @@ Gridlock is a visual memory recall game designed to be engaging for both childre
 
 [Help Article - Timing Events](https://www.w3schools.com/js/js_timing.asp#:~:text=The%20setTimeout()%20Method,number%20of%20milliseconds%20before%20execution.)
 [Help Article - Timing Events](https://forum.freecodecamp.org/t/settimeout-func/597888)
+
+
+https://www.w3schools.com/jsref/jsref_from.asp - Array from 
