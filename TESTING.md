@@ -45,6 +45,8 @@ During the testing phase of the game, I focused on documenting bugs as soon as I
 | 7 | Variable had already been declared at start of JS script, unable to use for function.![Syntax Error](testing/Bugs/e11.png)| Rename variable to restartButton [Fix](testing/Bugs/e12.png) .|
 | 8 |When game is started ang patterb is rvealed , player cannot select any of the boxes/Nothing happens.Error in userClick function![Error Code](testing/Bugs/e14.png)| Syntax issues .Need to add brackets aroounf selectedBox.Second if statement has no curly braces.Order. [Fix](testing/Bugs/e8.png) .|
 | 9 | Grid does not clear after you have lost or won a game.[Error](testing/Bugs/e15.png)|In code , add anotehr for of statement withing reatrt game function , which will clear the boxes back to its og state (default blue color) [Fix](testing/Bugs/e8.png) .|
+| 10 | Countdown variable ntot defined.[Reference Error](testing/Bugs/e16.png)| Misatkenkly defined countdown variabke twice in js script .|
+| 11 | Countdown not counting down.[Reference Error](testing/Bugs/e17.png)| Elements needed moving within else blco so that it is exectuted once , not repeatedly.[Fix](testing/Bugs/e18.png)|
 ## Known Bugs 
 | No | Bug | 
 | :--- | :--- | 

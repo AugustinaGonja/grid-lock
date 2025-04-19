@@ -10,111 +10,112 @@
 
 /*Generic Page Stylings*/
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: black;
-    background-color: #ffeccc;
-    font-family: Orbitron, Verdana, sans-serif;
-    padding-top: 30px;
-  }
-  
-  header {
-    display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
-  }
-  
-  .container {
-    text-align: center;
-    font-weight: 700;
-    padding: 50px 0px;
-  }
-  h1 { 
-    font-size: 54px;
-    font-weight:800;
-    padding-bottom: 25px;
-  }
-  
-  h2 {
-    text-decoration: underline;
-  }
-
-  p{
-    font-weight: 300;
-  }
-  .game-level ,.options,h4{
-    display: flex;
-    justify-content:center;
-    margin:20px;
-  }
-.counter{
-  padding:15px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  background-color: #ffeccc;
+  font-family: Orbitron, Verdana, sans-serif;
+  padding-top: 30px;
 }
-#bold{
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.container {
+  text-align: center;
+  font-weight: 700;
+  padding: 50px 0px;
+}
+h1 {
+  font-size: 54px;
+  font-weight: 800;
+  padding-bottom: 25px;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+p {
+  font-weight: 300;
+}
+.game-level,
+.options,
+h4 {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.counter {
+  padding: 15px;
+}
+#bold {
   padding-top: 20px;
   font-weight: 500;
 }
 /*Buttons*/
 button {
-    margin:0px 32px;
-    padding: 10px 40px;
-    font-family: Orbitron;
-    font-weight: 500;
-  }
-  
-  #challenge{
-  background-color:#f36d6d;
-  }
-  
-  #normal{
-    background-color: #93c47d;
-  }
-  
-  #restart , #home{
-    background-color:#a2c4c9;
-    } 
-  
-  button a {
-    text-decoration: none;
-    color: black;
-  }
-   .game-level :hover {
-    transition: 1s ease-out;
-    transform: scale(1.25);
-    perspective:(10px);
-   }
-   .options :hover {
-    transition: 1s ease-out;
-    transform: scale(1.25);
-    perspective:(10px);
-   }
+  margin: 0px 32px;
+  padding: 10px 40px;
+  font-family: Orbitron;
+  font-weight: 500;
+}
+
+#challenge {
+  background-color: #f36d6d;
+}
+
+#normal {
+  background-color: #93c47d;
+}
+
+#restart,
+#home {
+  background-color: #a2c4c9;
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+.game-level :hover {
+  transition: 1s ease-out;
+  transform: scale(1.25);
+  perspective: (10px);
+}
+.options :hover {
+  transition: 1s ease-out;
+  transform: scale(1.25);
+  perspective: (10px);
+}
 
 /*Game Grid Stylings*/
 .game-grid {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
 .box {
   background-color: #a2c4c9;
   width: 80px;
   height: 80px;
-  margin : 5px 5px 5px 0px;
+  margin: 5px 5px 5px 0px;
   border-radius: 10px;
 }
 
 .box:hover {
- filter: opacity(0.6);
+  filter: opacity(0.6);
 }
-/*Timer
-#countdown-timer {
-  background-color: aquamarine;
- display: flex;
- width: 100px;
- justify-content: center;
- margin: 20px;
- align-items: center;
-}*/
+/*Timer*/
+#countdown {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 /*Media Queries - Phones*/
 @media (max-width: 768px) {
   header {
@@ -122,6 +123,6 @@ button {
   }
   .box {
     width: 5vh;
-    height:5vh ;
+    height: 5vh;
   }
 }
