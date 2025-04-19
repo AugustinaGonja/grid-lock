@@ -52,14 +52,15 @@ function revealPattern() {
       countdown.textContent = `Pattern will disappear in ... ${revealTime}s`
     } else {
       clearInterval(timer);
-    }
+    
     // Will ensure that the pattern disappears within the time limit 
     for (let i = 0; i < pattern.length; i++) {
       boxes[pattern[i]].style.backgroundColor = "";
-      // Restores color back to normal for all highlighted tiles
     }
-    countdown.textContent = ""; // Clear text content
-    clickTile();
+      // Restores color back to normal for all highlighted tiles
+      countdown.textContent = ""; // Clear text content
+      clickTile();
+    }
   }, 1000); // 1 second between each 
 }
 
