@@ -4,25 +4,24 @@ let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
 
 
-const boxesToRecall = 8;
+let boxesToRecall = 10;
 let pattern = [];
 let correctTiles = 0;
 
 // Generate Pattern
+
 function generatePattern() {
   pattern = [];
   const allBoxes = [];
 
   for (i = 0; i < boxes.length; i++) {
-    // Add all with box class to the allBoxes array
+    // All .box elements added to Array
     allBoxes.push(i)
   };
-  // Generate an array which has a length of 8 random numbers from the allBoxes array and add to pattern.
+  // Generate pattern array of randomised numbers
   while (pattern.length < boxesToRecall) {
     let randNum = Math.floor(Math.random() * boxes.length);
-    //pattern.push(randNum);
-    /* Ensure that no numbers are repeats.
-    If the pattern includes randNum already , dont include in pattern*/
+    // Ensure that array has no repeated numbers
     if (!pattern.includes(randNum)) {
       pattern.push(randNum);
     };
@@ -36,7 +35,8 @@ function generatePattern() {
 // Reveal Pattern 
 
 function revealPattern() {
-  let revealTime = 5 // Reveal time is 5s
+  // Reveal time is 5s
+  let revealTime = 5
   let countdown = document.getElementById("countdown")
 
 
@@ -52,16 +52,17 @@ function revealPattern() {
       countdown.textContent = `Pattern will disappear in ... ${revealTime}s`
     } else {
       clearInterval(timer);
-    
-    // Will ensure that the pattern disappears within the time limit 
-    for (let i = 0; i < pattern.length; i++) {
-      boxes[pattern[i]].style.backgroundColor = "";
-    }
-      // Restores color back to normal for all highlighted tiles
-      countdown.textContent = ""; // Clear text content
+
+      // Ensure that the pattern disappears in time limit
+      for (let i = 0; i < pattern.length; i++) {
+        // Restores color for all highlighted tiles
+        boxes[pattern[i]].style.backgroundColor = "";
+      }
+      // Clear text content
+      countdown.textContent = "";
       clickTile();
     }
-  }, 1000); // 1 second between each 
+  }, 1000); // 1 second delay
 }
 
 // Click Tile
@@ -79,17 +80,18 @@ function stopClick() {
   }
 };
 
-// User Click
-// Takes care of what will happen when user clicks correct or incorrect tile
+/*User Click
+What will happen when user clicks correct or incorrect tile*/
 
 function userClick(e) {
   let selectedBox = e.target;
-  let boxIndex = Array.from(boxes).indexOf(selectedBox); // Get index of box that player has selected
+  // Get index of box selected by player
+  let boxIndex = Array.from(boxes).indexOf(selectedBox);
 
   if (pattern.includes(boxIndex)) {
-    if (!selectedBox.style.backgroundColor) {// if box isnt already green ,then user can click and inc score if it is part of array
-      selectedBox.style.backgroundColor = "#568203" //Change Colour to Green if player has selected box that is inc in array.
-      correctTiles++;//increment score by 1
+    if (!selectedBox.style.backgroundColor) {
+      selectedBox.style.backgroundColor = "#568203" // Green
+      correctTiles++; //increment score by 1
       scoreCounter.textContent = correctTiles;
     };
 
@@ -99,17 +101,17 @@ function userClick(e) {
     }
 
   } else {
-    selectedBox.style.backgroundColor = "#c21807"//Change Colour to Red if otherwise
+    selectedBox.style.backgroundColor = "#c21807" // Red
     alert("Oh no ! This is the Wrong tile :( Game Over.")
     stopClick();
   }
 };
 restartGame();
 
-// Start/Restart Game
+// Restart Game
 
 function restartGame() {
-  // Clear Score Count back to 0
+  // Clear Score Count
   correctTiles = 0;
   scoreCounter.textContent = 0;
   // Restore all boxes to original state
