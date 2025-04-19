@@ -12,3 +12,5 @@ Gridlock is a visual memory recall game designed to be engaging for both childre
 
 
 https://www.w3schools.com/jsref/jsref_from.asp - Array from 
+
+https://www.youtube.com/watch?v=x7WJEmxNlEs&t=3s - countdown timer 

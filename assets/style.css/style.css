@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     color: black;
-    background-color: #fafaf0;
+    background-color: #ffeccc;
     font-family: Orbitron, Verdana, sans-serif;
     font-weight: 300;
     padding-top: 50px;
@@ -96,7 +96,15 @@ button {
 .box:hover {
  filter: opacity(0.6);
 }
-
+/*Timer
+#countdown-timer {
+  background-color: aquamarine;
+ display: flex;
+ width: 100px;
+ justify-content: center;
+ margin: 20px;
+ align-items: center;
+}*/
 /*Media Queries - Phones*/
 @media (max-width: 768px) {
   header {
