@@ -36,17 +36,29 @@ function generatePattern() {
 // Reveal Pattern 
 
 function revealPattern() {
-  let revealTime = 5000 // Reveal time is 5s
+  let revealTime = 5 // Reveal time is 5s
+  let countdown = document.getElementById("countdown")
+
 
   for (let i = 0; i < pattern.length; i++) {
     boxes[pattern[i]].style.backgroundColor = "#ed9121";
   }
+  countdown.textContent=`Pattern will disappear in ... ${revealTime}s`
+  
+  let timer = setInterval(() => {
+    revealTime--;
+  // Pattern will disapper once time is equal to 0
+  if (revealTime > 0){
+    countdown.textContent=`Pattern will disappear in ... ${revealTime}s`
+  }else{
+    clearInterval(timer)
+  }
   // Will ensure that the pattern disappears within the time limit 
-  setTimeout(function () {
     for (let i = 0; i < pattern.length; i++) {
       boxes[pattern[i]].style.backgroundColor = "";
       // Restores color back to normal for all highlighted tiles
     }
+    countdown.textContent = ""; // Clear text content
     clickTile();
   }, revealTime);
 }
