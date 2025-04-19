@@ -2,6 +2,7 @@
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
+let countdown = getElementById("countdown");
 
 const boxesToRecall = 8;
 let pattern = [];
@@ -35,7 +36,7 @@ function generatePattern() {
 // Reveal Pattern 
 
 function revealPattern() {
-  let revealTime = 4000 // Reveal time is 10s
+  let revealTime = 5000 // Reveal time is 5s
 
   for (let i = 0; i < pattern.length; i++) {
     boxes[pattern[i]].style.backgroundColor = "#ed9121";
