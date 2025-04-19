@@ -28,7 +28,6 @@ header {
 .container {
   text-align: center;
   font-weight: 700;
-  padding: 50px 0px;
 }
 h1 {
   font-size: 54px;
@@ -118,11 +117,17 @@ button a {
 }
 /*Media Queries - Phones*/
 @media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
+  h1 {
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   .box {
-    width: 5vh;
-    height: 5vh;
+    width: 7.5vh;
+    height: 7.5vh;
+  }
+  button {
+    padding:5px 20px;
   }
 }
