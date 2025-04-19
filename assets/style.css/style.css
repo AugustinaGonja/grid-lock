@@ -16,8 +16,7 @@ body {
     color: black;
     background-color: #ffeccc;
     font-family: Orbitron, Verdana, sans-serif;
-    font-weight: 300;
-    padding-top: 50px;
+    padding-top: 30px;
   }
   
   header {
@@ -28,23 +27,34 @@ body {
   
   .container {
     text-align: center;
-    padding: 20px 0px;
+    font-weight: 700;
+    padding: 50px 0px;
   }
-  h1 {
+  h1 { 
     font-size: 54px;
+    font-weight:800;
     padding-bottom: 25px;
   }
   
   h2 {
     text-decoration: underline;
   }
-  
+
+  p{
+    font-weight: 300;
+  }
   .game-level ,.options,h4{
     display: flex;
     justify-content:center;
-    margin:10px;
+    margin:20px;
   }
-
+.counter{
+  padding:15px;
+}
+#bold{
+  padding-top: 20px;
+  font-weight: 500;
+}
 /*Buttons*/
 button {
     margin:0px 32px;
