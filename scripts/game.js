@@ -90,7 +90,7 @@ function userClick(e) {
   stopClick();
 }
 };
-
+restartGame();
 
 // Start/Restart Game
 
