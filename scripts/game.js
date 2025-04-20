@@ -76,7 +76,7 @@ function clickTile() {
 
 function stopClick() {
   for (let i = 0; i < boxes.length; i++) {
-    boxes[i].removeEventListener("click", stopClick);
+    boxes[i].removeEventListener("click", userClick);
   }
 };
 
