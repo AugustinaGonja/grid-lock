@@ -3,7 +3,6 @@ let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
 
-
 let boxesToRecall = 10;
 let pattern = [];
 let correctTiles = 0;
@@ -65,6 +64,7 @@ function revealPattern() {
   }, 1000); // 1 second delay
 }
 
+
 // Click Tile
 
 function clickTile() {
@@ -98,15 +98,16 @@ function userClick(e) {
     if (correctTiles === pattern.length) {
       alert("Congratulations! You are a winner :)");
       stopClick();
+      restartGame();
     }
 
   } else {
     selectedBox.style.backgroundColor = "#c21807" // Red
     alert("Oh no ! This is the Wrong tile :( Game Over.")
     stopClick();
+    restartGame();
   }
 };
-restartGame();
 
 // Restart Game
 
