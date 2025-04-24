@@ -64,7 +64,8 @@ a {
   font-weight: 500;
   color: black;
   text-decoration: none;
-  border: 2px solid black;
+  border: 1px solid black;
+  font-size: 14px;
 }
 
 #challenge {
