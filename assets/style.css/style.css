@@ -84,12 +84,10 @@ button a {
 .game-level :hover {
   transition: 1s ease-out;
   transform: scale(1.25);
-  perspective: (10px);
 }
 .options :hover {
   transition: 1s ease-out;
   transform: scale(1.25);
-  perspective: (10px);
 }
 
 /*Game Grid Stylings*/
