@@ -57,11 +57,14 @@ h4 {
   font-weight: 500;
 }
 /*Buttons*/
-button {
+a {
   margin: 0px 32px;
   padding: 10px 40px;
   font-family: Orbitron;
   font-weight: 500;
+  color: black;
+  text-decoration: none;
+  border: 2px solid black;
 }
 
 #challenge {
@@ -77,10 +80,6 @@ button {
   background-color: #a2c4c9;
 }
 
-button a {
-  text-decoration: none;
-  color: black;
-}
 .game-level :hover {
   transition: 1s ease-out;
   transform: scale(1.25);
@@ -126,6 +125,6 @@ button a {
     height: 7.5vh;
   }
   button {
-    padding:5px 20px;
+    padding: 5px 20px;
   }
 }
