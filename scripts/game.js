@@ -34,6 +34,9 @@ function generatePattern() {
 // Reveal Pattern 
 
 function revealPattern() {
+  let text = "Memorise the pattern, you have 5 seconds!\nRemember , Select a correct tile, and it lights up green.\nPick the wrong one, and its game over"
+  alert(text);
+  
   // Reveal time is 5s
   let revealTime = 5
   let countdown = document.getElementById("countdown")
@@ -96,16 +99,20 @@ function userClick(e) {
     };
 
     if (correctTiles === pattern.length) {
-      alert("Congratulations! You are a winner :)");
       stopClick();
-      restartGame();
+      setTimeout(() => {
+        alert("Congratulations! You are a winner :)");
+        restartGame();
+      }, 200);
     }
 
   } else {
     selectedBox.style.backgroundColor = "#c21807" // Red
-    alert("Oh no ! This is the Wrong tile :( Game Over.")
     stopClick();
-    restartGame();
+    setTimeout(() => {
+      alert("Oh no! This is the Wrong tile :( Game Over.");
+      restartGame();
+    }, 200);
   }
 };
 
