@@ -5,8 +5,8 @@ let restartButton = document.getElementById("restart");
 let gameNormal = document.getElementById("normal");
 let gameChallenge = document.getElementById("challenge");
 
-let revealTime = 5;
-let boxesToRecall = 10;
+let revealTime = 8;
+let boxesToRecall = 5;
 let pattern = [];
 let correctTiles = 0;
 
@@ -37,7 +37,7 @@ function generatePattern() {
 // Reveal Pattern 
 
 function revealPattern() {
-  let text = "Memorise the pattern, you have 5 seconds!🕒\nThen try to replicate it on the grid.\n\nSelect the correct tile, and it lights up green ✅ \nPick the wrong one, and its game over ❌\n\n Good Luck!🎲 "
+  let text = "Remember the pattern! You have 5 seconds to recall the 8 highlighted boxes!🕒\n\nSelect the correct tile, and it lights up green ✅ \nPick the wrong one, and its game over ❌\n\n Good Luck!🎲 "
   alert(text);
 
   // Reveal time is 5s
@@ -142,18 +142,3 @@ restartGame();
 
 restartButton.addEventListener("click", restartGame);
 
-// Add Event Listeners for both Game Levels
-gameNormal.addEventListener("click", function(){
-  boxesToRecall = 8
-  revealTime = 5
-  restartGame();
-console.log(boxesToRecall),
-console.log(revealTime);
-});
-gameChallenge.addEventListener("click", function(){
-  boxesToRecall = 10
-  revealTime = 8;
-  restartGame();
-  console.log(boxesToRecall),
-console.log(revealTime);
-});
