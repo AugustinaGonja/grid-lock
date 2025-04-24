@@ -2,6 +2,8 @@
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
+let gameNormal = document.getElementById("normal")
+let gameChallenge = document.getElementById("challenge")
 
 let boxesToRecall = 10;
 let pattern = [];
@@ -75,6 +77,7 @@ function clickTile() {
     boxes[i].addEventListener("click", userClick);
   }
 };
+
 // Stop Click
 
 function stopClick() {
