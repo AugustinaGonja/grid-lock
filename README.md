@@ -186,6 +186,8 @@ If I had more time to enhance this project, I would consider implementing the fo
 
 * Thematic Pattern Design: Replace fully random patterns with more intentional, visually recognizable designs—such as patterns resembling simple drawings. This would open the door to different thematic levels and a more engaging aesthetic.
 
+* Add a harder level with distractions to confuse the player i.e. highlighting random boxes  whilst user is selecting thier tiles.
+
 * Customization Options:
     * Allow players to adjust the grid dimensions along both the x and y axes.
     * Enable customization of the number of boxes to memorize.

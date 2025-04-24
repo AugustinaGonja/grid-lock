@@ -9,6 +9,7 @@ During the testing phase of the game, I focused on documenting bugs as soon as I
 **[Automated Testing](#automated-testing)**
 * [Html Validator](#wc3-html-validator)
 * [CSS Validator](#wc3-css-validator)
+* [JS Validator](#wc3-css-validator)
 
 **[Performance Testing](#performance-testing-lighthouse)**
 * [Desktop](#desktop)
@@ -29,8 +30,23 @@ During the testing phase of the game, I focused on documenting bugs as soon as I
 
 ## Automated Testing
 ### WC3 HTML Validator
+* [index.html](testing/Validators/index.html%20validator.png)
+* [Normal.html](testing/Validators/css%20pass.png)
+* [Challenge.html](testing/Validators/css%20pass.png)
 
-### WC3 CSS Validator
+The "cells" attribute within the div flagged an [error](testing/Validators/gamelevel%20html.png). Since these aren't important and I mainly used them for reference, I could safely remove them without affecting my code.
+
+The consistent [issue](testing/Validators/index.html%20error.png) I encountered with my html was with the anchor tags nested inside the buttons. I removed the button element and and styled the anchors in CSS.
+### CSS Validator
+* [style.css](testing/Validators/css%20pass.png) <br>
+**Passed**<br>
+
+I initially encountered a [Parse Error](testing/Validators/css%20error.png), but I removed the styling elements that caused it, as they didn't significantly affect the appearance. I ran it through the validator, and it passed.
+### JS Linter
+* [game.js](testing/Validators/jslint.png) <br>
+* [game.c.js](testing/Validators/jslint.png) <br>
+
+The two js files are identical except for the values of some variables. No major issues, aside from the ones mentioned above. The two errors flagged are functioning correctly with the proper syntax.
 # Performance Testing
 # Solved & Known Bugs 
 ## Solved Bugs 
