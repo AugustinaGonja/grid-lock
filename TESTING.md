@@ -3,7 +3,7 @@ During the testing phase of the game, I focused on documenting bugs as soon as I
 ![Game as displayed on different screensizes]()
 
 
-[View Gridlock on GitHub Pages](https://augustinagonja.github.io/grid-lock/)
+[View Deployed site](https://augustinagonja.github.io/grid-lock/)
 
 ## Contents
 **[Automated Testing](#automated-testing)**

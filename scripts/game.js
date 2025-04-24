@@ -2,8 +2,8 @@
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
-let gameNormal = document.getElementById("normal")
-let gameChallenge = document.getElementById("challenge")
+let gameNormal = document.getElementById("normal");
+let gameChallenge = document.getElementById("challenge");
 
 let boxesToRecall = 10;
 let pattern = [];
@@ -140,3 +140,17 @@ restartGame();
 // Add Event Listener to Restart Game button  
 
 restartButton.addEventListener("click", restartGame);
+
+// Add Event Listeners for both Game Levels
+gameNormal.addEventListener("click", function(){
+  boxesToRecall = 8
+  revealTime = 5
+console.log(boxesToRecall),
+console.log(revealTime);
+});
+gameChallenge.addEventListener("click", function(){
+  boxesToRecall = 10
+  revealTime = 8
+  console.log(boxesToRecall),
+console.log(revealTime);
+});
