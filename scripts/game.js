@@ -5,6 +5,7 @@ let restartButton = document.getElementById("restart");
 let gameNormal = document.getElementById("normal");
 let gameChallenge = document.getElementById("challenge");
 
+let revealTime = 5;
 let boxesToRecall = 10;
 let pattern = [];
 let correctTiles = 0;
@@ -40,20 +41,20 @@ function revealPattern() {
   alert(text);
 
   // Reveal time is 5s
-  let revealTime = 5
+  let time = revealTime;
   let countdown = document.getElementById("countdown")
 
 
   for (let i = 0; i < pattern.length; i++) {
     boxes[pattern[i]].style.backgroundColor = "#ed9121";
   }
-  countdown.textContent = `Pattern will disappear in ... ${revealTime}s`
+  countdown.textContent = `Pattern will disappear in ... ${time}s`
 
   let timer = setInterval(() => {
-    revealTime--;
+    time--;
     // Pattern will disapper once time is equal to 0
-    if (revealTime > 0) {
-      countdown.textContent = `Pattern will disappear in ... ${revealTime}s`
+    if (time > 0) {
+      countdown.textContent = `Pattern will disappear in ... ${time}s`
     } else {
       clearInterval(timer);
 
@@ -145,12 +146,14 @@ restartButton.addEventListener("click", restartGame);
 gameNormal.addEventListener("click", function(){
   boxesToRecall = 8
   revealTime = 5
+  restartGame();
 console.log(boxesToRecall),
 console.log(revealTime);
 });
 gameChallenge.addEventListener("click", function(){
   boxesToRecall = 10
-  revealTime = 8
+  revealTime = 8;
+  restartGame();
   console.log(boxesToRecall),
 console.log(revealTime);
 });
