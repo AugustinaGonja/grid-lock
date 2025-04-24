@@ -176,6 +176,8 @@ Added hover and sound effects to interactive elements like buttons and clickable
 
 
 ### Future Implementation
+I ended up using two JavaScript files. In hindsight, I should’ve tried to stick to just one file for each — it would’ve made everything a lot cleaner and easiier to maintain.<br> The reason I split things up was because I had some features I wanted to add, but I thought of them near the end of the project. Implementing them would’ve had a knock-on effect on the rest of my code, and I couldn’t quite figure out how to add them seamlessly. So instead, I resorted to creating another JS file to handle them.
+
 If I had more time to enhance this project, I would consider implementing the following features:
 
 * Instructional Modal: Introduce a modal popup that appears before gameplay begins, providing clear instructions instead of using standard browser alerts. This would improve readability and overall user experience.

@@ -2,11 +2,9 @@
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
-let gameNormal = document.getElementById("normal");
-let gameChallenge = document.getElementById("challenge");
 
-let revealTime = 8;
-let boxesToRecall = 5;
+let revealTime = 5;
+let boxesToRecall = 8;
 let pattern = [];
 let correctTiles = 0;
 
