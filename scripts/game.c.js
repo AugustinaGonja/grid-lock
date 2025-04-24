@@ -16,31 +16,31 @@ function generatePattern() {
 
   for (i = 0; i < boxes.length; i++) {
     // All .box elements added to Array
-    allBoxes.push(i)
-  };
+    allBoxes.push(i);
+  }
   // Generate pattern array of randomised numbers
   while (pattern.length < boxesToRecall) {
     let randNum = Math.floor(Math.random() * boxes.length);
     // Ensure that array has no repeated numbers
     if (!pattern.includes(randNum)) {
       pattern.push(randNum);
-    };
-  };
+    }
+  }
   console.log(boxes);
   console.log(allBoxes);
   console.log(pattern);
-};
+}
 
 
 // Reveal Pattern 
 
 function revealPattern() {
-  let text = "Remember the pattern! You have 8 seconds to recall the 10 highlighted boxes!🕒\n\nSelect the correct tile, and it lights up green ✅ \nPick the wrong one, and its game over ❌\n\n Good Luck!🎲 "
+  let text = "Remember the pattern! You have 8 seconds to recall the 10 highlighted boxes!🕒\n\nSelect the correct tile, and it lights up green ✅ \nPick the wrong one, and its game over ❌\n\n Good Luck!🎲 ";
   alert(text);
 
   // Reveal time is 5s
   let time = revealTime;
-  let countdown = document.getElementById("countdown")
+  let countdown = document.getElementById("countdown");
 
 
   for (let i = 0; i < pattern.length; i++) {
@@ -141,3 +141,4 @@ restartGame();
 restartButton.addEventListener("click", restartGame);
 
 // Add Event Listeners for both Game Levels
+
