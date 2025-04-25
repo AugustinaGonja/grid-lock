@@ -4,7 +4,7 @@
 Gridlock is a memory game that tests your visual recall.Watch carefully as a random pattern of tiles briefly lights up on the grid — then it disappears!
 It is up to you to remember and recreate the exact pattern by selecting the correct tiles.
 
-![Game as displayed on different screensizes]()
+![Game as displayed on different screensizes](assets/images/amiresponsive%20.png)
 
 The game is designed to be engaging for both children and adults. Inspired by brain training exercises, the game aims to enhance players' short- and long-term memory over time. The concept is derived from a game show challenge in which participants were shown a grid with a flashing pattern of connected tiles that formed a path. After a brief moment to memorize the pattern, the players had to physically step on the correct tiles.
 
@@ -42,7 +42,7 @@ The overall output for this project is as follows:
 
 * Introductory Page : This page provides a description of the game and explains how to win. It includes two buttons.
 * Game page (Normal): This page hosts the gameplay, featuring a 5x5 grid along with Home and Restart buttons.
-* Game page (Challenging): This page hosts the gameplay, featuring a 5x5 grid along with Home and Restart buttons.
+* Game page (Challenging): This page hosts the gameplay, featuring a 6x6 grid along with Home and Restart buttons.
 
 ### User Stories 
 
@@ -122,42 +122,48 @@ The website consists of three main pages: an Introduction page, and two gameplay
 
 **Home Page**
 
- **Favicon/Logo**
+ **Logo**
 
- My favicon effectively represents the name of the game, 'Gridlock.' 
- [See Icon Here](assets/images/icon.png).
- It features a grid with arrows pointing in opposite directions alongside a lock icon—visually capturing the concept in a straightforward yet fitting manner. While it's quite literal, I believe it complements the overall theme well.
+ My logo effectively represents the name of the game, 'Gridlock.
+ <br>[See Icon Here](assets/images/icon.png).
+
+ It features a grid with arrows pointing in opposite directions alongside a lock icon-visually capturing the concept in a straightforward yet fitting manner. While it's quite literal, I believe it complements the overall theme well.
 
 ---
 **Introductory Page**
 
-![Image showing Home Page on different devices](assets/images/Homeimage.png)
+![Image showing Home Page on different devices](assets/images/amiresponsive%20-%20index.png)
 The Introduction page features the main title of the game and provides an overview of the game’s objectives and winning criteria. Below this, two buttons allow players to select their preferred difficulty level. 
 *Additionally, there is a section for returning visitors to view their previous scores*
 
 ---
 **Game Page - Normal**
 
-![Image showing Home Page on different devices](assets/images/Homeimage.png)
+![Image showing Home Page on different devices](assets/images/amiresponsive%20-%20normal.png)
 
-This page features a 5x5 grid, consistent with the layout used across both difficulty levels. Common elements include the grid structure, a 'Restart' button, and a 'Back to Homepage' button. 
-
-[5x5 Highlighted Grid](assets/images/Homeimage.png)
+This page features a [5x5 Grid](assets/images/5x5%20Grid.png)
+, consistent with the layout used across both difficulty levels. Common elements include the grid structure, a 'Restart' button, and a 'Back to Homepage' button. 
 
 The "Restart" button resets the game by generating and briefly highlighting a new pattern, which disappears after a set period. A countdown timer indicating the remaining time is displayed above the grid and vanishes once the pattern is hidden.
-![Restart & Homepage Button](assets/images/Homeimage.png)
-![Countdown GIF](assets/images/Homeimage.png)
+
+![Restart & Homepage Button](assets/images/buttons.png)
+
+**Countdown**<br>
+Click to play
+<video controls src="countdown.mp4" title="Title"></video>
+
 The "Back to Homepage" button redirects players to the Introduction page. Additionally, a "Correct Tile Counter" is present to track the number of correctly selected tiles during gameplay.
-![Score Count](assets/images/Homeimage.png)
+
+![Score Count](assets/images/score.png)
 
 ---
 
 **Game Page - Challenging**
 
-![Image showing Home Page on different devices](assets/images/Homeimage.png)
+![Image showing Home Page on different devices](assets/images/amiresponsive%20-%20challenge.png)
 All game pages share a consistent visual layout, with variations only in the grid size, the number of tiles to memorize, and the memorization time allocated. The difficulty level influences these elements—the more complex the pattern, the more time is provided to memorize it.
-[7x7 Highlighted Grid](assets/images/Homeimage.png)
-This particular page features a 7x7 grid, offering a greater challenge due to the increased number of tiles, which raises the likelihood of errors and demands sharper focus
+
+This particular page features a [6x6 Grid](assets/images/6x6%20Grid.png), offering a greater challenge due to the increased number of tiles, which raises the likelihood of errors and demands sharper focus
 
 ##  Accesibility
 **Semantic HTML**
@@ -166,17 +172,23 @@ Used elements like **header, main, nav and section** to define, describe, and se
 
 **Color Contrast**
 
-**Red-Green Color Blindness**
+I ran each page through the WAVE contrast checker, and they all passed. See the tests in **[TESTING.md](TESTING.md#performance-testing-lighthouse)**.
 
-**Hover & Sound Effects on Interactive Elements**
+**Hover on Interactive Elements**
 
-Added hover and sound effects to interactive elements like buttons and clickable boxes within the game to improve user engagement.
+Added hover effects to interactive elements like buttons and clickable boxes within the game to improve user engagement.
 
 **Font**
 
+I chose the Orbitron font with fallbacks of Verdana and sans-serif. The font complements the theme while remaining clean and readable. As mentioned, the use of different font weights helps distinguish sections of the page, enhancing readability. The font sizes are also appropriate.
+
+**Alerts**
+
+I used alerts within the game to communicate the rules. These alerts also appear when the player wins or loses, each with different messages to reflect the outcome.
 
 ### Future Implementation
-I ended up using two JavaScript files. In hindsight, I should’ve tried to stick to just one file for each — it would’ve made everything a lot cleaner and easiier to maintain.<br> The reason I split things up was because I had some features I wanted to add, but I thought of them near the end of the project. Implementing them would’ve had a knock-on effect on the rest of my code, and I couldn’t quite figure out how to add them seamlessly. So instead, I resorted to creating another JS file to handle them.
+I ended up using two JavaScript files. In hindsight, I should’ve tried to stick to just one file for each — it would’ve made everything a lot cleaner and easiier to maintain.
+<br> The reason I split things up was because I had some features I wanted to add, but I thought of them near the end of the project. Implementing them would’ve had a knock-on effect on the rest of my code, and I couldn’t quite figure out how to add them seamlessly. So instead, I resorted to creating another JS file to handle them.
 
 If I had more time to enhance this project, I would consider implementing the following features:
 
@@ -205,7 +217,7 @@ This will outline all of the testing and debugging processess*
 
 ## Technologies Used
 
-**Languages:**
+**Languages:**<br>
 This project required the use of HTML , CSS and Javascript.
 ### Frameworks, Libraries & Programs Used
 * **[Balsamiq](https://balsamiq.com/)**<br>To build page by page wireframes.
@@ -229,7 +241,7 @@ This project required the use of HTML , CSS and Javascript.
 All written content was composed by myself.<br>I refined the flow and readbility of the text via Grammarly.
 ### Media
 As for media, I chose not to use any external images, as I felt they weren’t necessary.<br>
-However, I did implement a sound effect for all buttons and boxes within the game grid, using an audio file downloaded from [Pixabay](https://pixabay.com/sound-effects/search/button/).
+I was planning to implement a sound effect for all buttons and boxes within the game grid, using an audio file downloaded from [Pixabay](https://pixabay.com/sound-effects/search/button/).
 
 ## Credits 
 
@@ -241,20 +253,17 @@ I found myself frequently returning to the discussion boards and articles on the
 * [StackOverflow](https://stackoverflow.com/questions)
 * [MDN WebDocs](https://developer.mozilla.org/en-US/ )
 
-
+Specific Help Articles :
 
 * [Help Article - Prevent Repeating Numbers in Array](https://forum.freecodecamp.org/t/how-to-make-math-random-not-repeat-same-numbers/417973/2) 
 
-[Help Article - Timing Events](https://www.w3schools.com/js/js_timing.asp#:~:text=The%20setTimeout()%20Method,number%20of%20milliseconds%20before%20execution.)
-[Help Article - Timing Events](https://forum.freecodecamp.org/t/settimeout-func/597888)
+* [Help Article - Timing Events](https://www.w3schools.com/js/js_timing.asp#:~:text=The%20setTimeout()%20Method,number%20of%20milliseconds%20before%20execution.)
+* [Help Article - Timing Events](https://forum.freecodecamp.org/t/settimeout-func/597888)
 
 
-https://www.w3schools.com/jsref/jsref_from.asp - Array from 
+* [Array.from](https://www.w3schools.com/jsref/jsref_from.asp)
 
-https://www.youtube.com/watch?v=x7WJEmxNlEs&t=3s - countdown timer 
-
-https://stackoverflow.com/questions/29022829/increment-score-using-javascript
-
-https://stackoverflow.com/questions/24768067/display-alert-only-once
+* [Countdown Timer](https://www.youtube.com/watch?v=x7WJEmxNlEs&t=3s)
+* [Increment Score](https://stackoverflow.com/questions/29022829/increment-score-using-javascript)
 ---
 [Back to the top](#gridlock)
