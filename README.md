@@ -125,9 +125,11 @@ The website consists of three main pages: an Introduction page, and two gameplay
  **Logo**
 
  My logo effectively represents the name of the game, 'Gridlock.
- <br>[See Icon Here](assets/images/icon.png).
+ <br> [See Icon Here](assets/images/icon.png).
 
- It features a grid with arrows pointing in opposite directions alongside a lock icon-visually capturing the concept in a straightforward yet fitting manner. While it's quite literal, I believe it complements the overall theme well.
+ It features a grid with arrows pointing in opposite directions alongside a lock icon-visually capturing the concept in a straightforward yet fitting manner. While it's quite literal, I believe it complements the overall theme well. There is also an option for theplayer to rate the game from 1 - 5 using radio buttons.
+
+![Form](assets/images/form.png).
 
 ---
 **Introductory Page**
@@ -150,6 +152,7 @@ The "Restart" button resets the game by generating and briefly highlighting a ne
 
 **Countdown**<br>
 Click to play
+
 <video controls src="countdown.mp4" title="Title"></video>
 
 The "Back to Homepage" button redirects players to the Introduction page. Additionally, a "Correct Tile Counter" is present to track the number of correctly selected tiles during gameplay.

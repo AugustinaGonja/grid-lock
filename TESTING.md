@@ -1,6 +1,7 @@
 # Gridlock - Testing
 During the testing phase of the game, I focused on documenting bugs as soon as I encountered them. Once again, Chrome DevTools proved to be incredibly helpful throughout this process. Due to time constraints, I wasn’t able to fully implement tests using Jest. Instead, I relied on console logging to verify that everything was functioning correctly on the backend.
-![Game as displayed on different screensizes]()
+
+![Game as displayed on different screensizes](assets/images/amiresponsive%20.png)
 
 
 [View Deployed site](https://augustinagonja.github.io/grid-lock/)
@@ -112,6 +113,8 @@ Browser
 | Timer |The countdown timer begins only after the user clicks "OK" on the alert message. | Clicked "OK" in alert | Timer counts down<br><br>(time depends on level chosen)| Pass |
 | Restart Button| Restarting the game generates a new pattern for the player| Clicked on button | Game restarts | Pass |
 | All buttons hover effect| Buttons expand on hover| Hover over button | Button expands on hover | Pass |
+| Feedback Form | Allows player to submit simple feedback about game. Form will not submit if option has not been clicked.  | Click submit | Form submit if correct input otherwise will prompt user to select radio button | Pass |
+
 # Solved & Known Bugs 
 ## Solved Bugs 
 | No | Bug | How I solved the issue |
