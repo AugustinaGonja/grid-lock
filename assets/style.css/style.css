@@ -90,6 +90,13 @@ a {
   transform: scale(1.25);
 }
 
+/*User Feedback*/
+#user-feedback{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #f2d0a4;
+}
+
 /*Game Grid Stylings*/
 .game-grid {
   display: flex;
@@ -113,6 +120,7 @@ a {
   justify-content: center;
   margin-bottom: 20px;
 }
+
 /*Media Queries - Phones*/
 @media (max-width: 768px) {
   h1 {
