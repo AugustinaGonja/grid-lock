@@ -57,7 +57,7 @@ h4 {
   font-weight: 500;
 }
 /*Buttons/Anchor*/
-a {
+a , #submit{
   margin: 0px 32px;
   padding: 10px 40px;
   font-family: Orbitron;
@@ -77,7 +77,7 @@ a {
 }
 
 #restart,
-#home {
+#home,#submit {
   background-color: #a2c4c9;
 }
 
@@ -91,10 +91,14 @@ a {
 }
 
 /*User Feedback*/
-#user-feedback{
-  display: flex;
-  justify-content: space-evenly;
+#user-feedback {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #f2d0a4;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
 }
 
 /*Game Grid Stylings*/
