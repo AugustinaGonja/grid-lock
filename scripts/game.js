@@ -2,11 +2,13 @@
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
+let form = document.getElementById('feedback');
 
 let revealTime = 5;
 let boxesToRecall = 8;
 let pattern = [];
 let correctTiles = 0;
+
 
 // Generate Pattern
 
@@ -143,3 +145,4 @@ restartGame();
 
 restartButton.addEventListener("click", restartGame);
 console.log("Restart button clicked");
+
