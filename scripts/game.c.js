@@ -137,5 +137,4 @@ restartGame();
 
 restartButton.addEventListener("click", restartGame);
 
-// Add Event Listeners for both Game Levels
 

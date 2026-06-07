@@ -2,7 +2,6 @@
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
-let form = document.getElementById('feedback');
 
 let revealTime = 5;
 let boxesToRecall = 8;
