@@ -1,5 +1,5 @@
 // GridLock
-let gameGrid = document.querySelector("game-grid");
+let gameGrid = document.querySelector(".game-grid");
 let boxes = document.querySelectorAll(".box");
 let scoreCounter = document.getElementById("correct-tiles");
 let restartButton = document.getElementById("restart");
