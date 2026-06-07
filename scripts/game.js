@@ -27,9 +27,6 @@ function generatePattern() {
       pattern.push(randNum);
     }
   }
-  console.log(boxes);
-  console.log(allBoxes);
-  console.log(pattern);
 }
 
 
@@ -61,13 +58,11 @@ function revealPattern() {
         // Restores color for all highlighted tiles
         boxes[pattern[i]].style.backgroundColor = "";
       }
-      console.log("Timer initiated");
       // Clear text content
       countdown.textContent = "";
       clickTile();
     }
   }, 1000); // 1 second delay
-  console.log("Countdown cleared and player can clcik tiles to play");
 }
 
 
@@ -76,7 +71,6 @@ function revealPattern() {
 function clickTile() {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].addEventListener("click", userClick);
-    console.log("Click tiles enabled");
   }
 };
 
@@ -85,7 +79,6 @@ function clickTile() {
 function stopClick() {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].removeEventListener("click", userClick);
-    console.log("Click tiles disabled.Event listener removed");
   }
 };
 
@@ -96,14 +89,12 @@ function userClick(e) {
   let selectedBox = e.target;
   // Get index of box selected by player
   let boxIndex = Array.from(boxes).indexOf(selectedBox);
-  console.log(boxIndex);
   if (pattern.includes(boxIndex)) {
     if (!selectedBox.style.backgroundColor) {
       selectedBox.style.backgroundColor = "#568203" // Green
       correctTiles++; //increment score by 1
       scoreCounter.textContent = correctTiles;
     };
-    console.log(correctTiles);
     if (correctTiles === pattern.length) {
       stopClick();
       setTimeout(() => {
@@ -125,7 +116,6 @@ function userClick(e) {
 
 function restartGame() {
   // Clear Score Count
-  console.log("Game restarting");
   correctTiles = 0;
   scoreCounter.textContent = 0;
   // Restore all boxes to original state
@@ -143,5 +133,4 @@ restartGame();
 // Add Event Listener to Restart Game button  
 
 restartButton.addEventListener("click", restartGame);
-console.log("Restart button clicked");
 

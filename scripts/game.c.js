@@ -26,9 +26,6 @@ function generatePattern() {
       pattern.push(randNum);
     }
   }
-  console.log(boxes);
-  console.log(allBoxes);
-  console.log(pattern);
 }
 
 
