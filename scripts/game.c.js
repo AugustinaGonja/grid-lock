@@ -14,7 +14,7 @@ function generatePattern() {
   pattern = [];
   const allBoxes = [];
 
-  for (i = 0; i < boxes.length; i++) {
+  for (let i = 0; i < boxes.length; i++) {
     // All .box elements added to Array
     allBoxes.push(i);
   }
