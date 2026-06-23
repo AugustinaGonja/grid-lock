@@ -128,9 +128,12 @@ Browser
 | 7 | Variable had already been declared at start of JS script, unable to use for function.![Syntax Error](testing/Bugs/e11.png)| Rename variable to restartButton [Fix](testing/Bugs/e12.png)|
 | 8 |When the game starts and the pattern is revealed, the player is unable to select any of the boxes-nothing happens upon clicking..Error in userClick function![Error Code](testing/Bugs/e14.png)| There are some syntax issues: brackets need to be added around selectedBox, and the second if statement is missing curly braces. Also, check the overall order of your code for proper structure.<br> [Fix](testing/Bugs/e8.png)|
 | 9 | Grid does not clear after you have lost or won a game.<br>[Error](testing/Bugs/e15.png)|Add another for...of loop within the restartGame function to reset the boxes to their original state by restoring the default blue color.<br> [Fix](testing/Bugs/e8.png)|
-| 10 | Countdown variable not defined. [Reference Error](testing/Bugs/e16.png)|Accidentally defined the countdown variable twice in the JS script.|
+| 10 | Countdown variable not defined.<br>[Reference Error](testing/Bugs/e16.png)|Accidentally defined the countdown variable twice in the JS script.|
 | 11 | Countdown not counting down.<br>[Reference Error](testing/Bugs/e17.png)| Certain elements needed to be moved inside the else block to ensure they execute only once, rather than repeatedly.<br>[Fix](testing/Bugs/e18.png)|
 | 12| The last tile clicked before losing or winning the game doesn't change color as expected.<br>[Reference Error](testing/Bugs/e19.png)| Add setTimeout to function after Stop Click is called.|
+| 13| Js loaded on pages that did not contain required game elements.<br> scripts/game.js loaded on pages other than normal game page (index.html, 404.html...etc) causing js errors during page load.<br>[Type Error](testing/Bugs/e23.png)|I ensured that the correct scripts were loaded into each game page and [removed uneccessary scripts]((testing/Bugs/e23.png)) from index and 404.html.<br><br> I also added [defensive checks](testing/Bugs/e27.png) to ensure that the correct game elements exsisted before running the game.| 
+| 14| Home code page mixed with game logic<br>Homepage functionality loaded into game scripts causing unneccessary dependencies between the two and increasing risk of runtime errors.<br>[Error](testing/Bugs/e24.png)|I seperated the homepage functionality from the game scripts by moving into a new scripts/home.js folder.<br>[Fix](testing/Bugs/e25.png)| 
+| 15| Js code quality where [loop variable](testing/Bugs/e28.png) was used without declaration and [console.log statements remained in final code](testing/Bugs/e29.png). | [Declared variable](testing/Bugs/e30.png) in for loop using let for both scripts. Removed all debigging console.log statements to improve quality and maintability of code.| 
 
 ## Known Bugs 
 | No | Bug | Issue |
@@ -140,7 +143,7 @@ Browser
 # Deployment & Local Development
 **Deployment Process**
 
-The process to deploy my game on GITHUb pages was fairly straightforward
+The process to deploy my game on Github pages was fairly straightforward
 
 Below are the steps I took:
 
