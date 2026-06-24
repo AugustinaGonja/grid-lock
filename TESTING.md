@@ -136,9 +136,7 @@ Browser
 | 15| Js code quality where [loop variable](testing/Bugs/e28.png) was used without declaration and [console.log statements remained in final code](testing/Bugs/e29.png). | [Declared variable](testing/Bugs/e30.png) in for loop using let for both scripts. Removed all debigging console.log statements to improve quality and maintability of code.| 
 
 ## Known Bugs 
-| No | Bug | Issue |
-| :--- | :--- | :--- |
-| 1 |![Type Error](testing/Bugs/e20.png)| The issue remains unresolved — the scoreCounter is correctly defined at the top of the JS file, so it's unclear why the error is occurring. Despite this, the game functions as expected. <br>[Error](testing/Bugs/e22.png)
+ No known bugs.
 
 # Deployment & Local Development
 **Deployment Process**
